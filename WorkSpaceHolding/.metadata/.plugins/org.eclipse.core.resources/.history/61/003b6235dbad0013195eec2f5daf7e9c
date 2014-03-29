@@ -1,0 +1,73 @@
+package sorting2014; 
+  
+
+/* 
+ *  * The sort method implements the 
+ * 'quick sort' algorithm. * It will run 
+ * only if the sort method is called. * 
+ * * @param Comparable the name for the 
+ * temporary array. * @param Cutoff * * 
+ * @see Sorter 
+ */
+
+public class QuickSort implements Sorter { 
+    private static long comparisons = 0; 
+    private static long exchanges = 0; 
+  
+    public void sort(Comparable[] items, int cutoff) { 
+        shuffle(items); 
+        quickSort(items, 0, items.length - 1); 
+    } 
+  
+    public static void quickSort(Comparable[] items, int left, int right) { 
+        if (right <= left) 
+            return; 
+        int i = partition(items, left, right); 
+        quickSort(items, left, i - 1); 
+        quickSort(items, i + 1, right); 
+        quickSort(items, i + 1, left);
+    } 
+  
+    private static int partition(Comparable[] items, int left, int right) { 
+        int i = left - 1; 
+        int j = right; 
+        while (true) { 
+            while (less(items[++i], items[right])) 
+                ; 
+            while (less(items[right], items[--j])) 
+                if (j == left) 
+                    break; 
+            if (i >= j) 
+                break; 
+            exch(items, i, j); 
+        } 
+        exch(items, i, right); 
+        return i; 
+    } 
+  
+    private static boolean less(Comparable items, Comparable items2) { 
+        comparisons++; 
+        return (items.compareTo(items2) < 0); 
+    } 
+  
+    private static void exch(Comparable[] items, int i, int j) { 
+        exchanges++; 
+        Comparable swap = items[i]; 
+        items[i] = items[j]; 
+        items[j] = swap; 
+    } 
+  
+    private static void shuffle(Comparable[] items) { 
+        int N = items.length; 
+        for (int i = 0; i < N; i++) { 
+            int r = i + (int) (Math.random() * (N - i)); 
+            exch(items, i, r); 
+        } 
+    } 
+  
+    public void printSortedArray(Comparable[] items) { 
+        for (int i = 0; i < items.length; i++) { 
+            System.out.println(items[i]); 
+        } 
+    } 
+}
