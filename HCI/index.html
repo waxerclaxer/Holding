@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+  <title>mim20 WebPage</title>
+  <link rel="stylesheet" href="mycss.css"/>
+  <script type="text/JavaScript" src="as1scripts/welcome.js"></script> 
+ 
+  <script type="text/javascript">
+	function open_popup (link, event)
+	{
+		var popup;
+
+		popup = window.open (link.href);
+		if ('focus' in popup) {
+			popup.focus ();
+		}
+		if ('preventDefault' in event) {
+			event.preventDefault ();
+		} else if ('returnValue' in event) {
+			event.returnValue = false;
+		}
+	}
+</script>
+</head>
+
+
+
+<body>
+
+<div id="menu">
+<!-- Site navigation menu -->
+	  <ul class="navbar">
+	    
+  <li><a href="index.html">Link home page</a></li>  
+  <li><a href="prac1.html">Link to practical one</a></li> 
+  <li><a href="prac2.html">Link to practical two</a></li> 
+  <li><a href="mim20cv.html"
+  onclick="open_popup (this, event);"
+  onkeypress="open_popup (this, event);"> My CV</a></li>
+  <li><a href="about.html">Write up</a></li> 
+
+</ul>
+</div>
+
+
+<div class="container">
+<!-- Main content -->
+<h1 id="Mainmenutitle">Michaels Web Page cs15020 assingment and info links</h1>
+</div>
+
+<div class="container">
+<p>This is the web page of Michael Mason</p>
+
+<p>
+I have linked in my practical work from the module and also linked
+some of my photographs and social networking sites. Please click on some of
+a select few photograhs to be linked to my flicker account.
+</p>
+
+<p>
+I declare that this is my own work. I have used sources <a href="http://css-tricks.com">CSS tricks</a>
+and <a href="http://www.w3.org">CSS tutorial</a> for guidence. This is an assingment and is not affiliated with the university.
+</p>
+
+<p>
+Please enter your name.
+  <input type="text" id="username" name="name" size="36"/>
+  <button onclick="welcome()" value="Submit">Submit</button>
+ </p>
+  </div>
+
+
+
+
+<div class="container" >
+
+<div class="img">
+
+  <a href="http://www.flickr.com/photos/mac4pro10/8106088627/in/photostream"
+  onclick="open_popup (this, event);"
+  onkeypress="open_popup (this, event);">
+  <img src="photo1.jpg" alt="mim20" width="110" height="90"/>
+  </a>
+  <div class="desc">A night shot of the fire dancers</div>
+  
+</div>
+<div class="img">
+
+  <a href="http://www.flickr.com/photos/mac4pro10/8098235116/in/photostream"
+  onclick="open_popup (this, event);"
+  onkeypress="open_popup (this, event);">
+  <img src="photo2.jpg" alt="mim20" width="110" height="90"/>
+  </a>
+  <div class="desc">One of the first photos I had published online and in local paper</div>
+  
+</div>
+<div class="img">
+
+ <a href="http://www.flickr.com/photos/mac4pro10/6904287132/in/photostream/"
+ onclick="open_popup (this, event);"
+ onkeypress="open_popup (this, event);">
+  <img src="photo3.jpg" alt="mim20" width="110" height="90"/>
+  </a>
+  <div class="desc">This photo was presented to a race for life representative</div>
+
+  </div>
+<div class="img">
+
+  <a href="http://www.flickr.com/photos/mac4pro10/6886787922/in/photostream/"
+  onclick="open_popup (this, event);"
+  onkeypress="open_popup (this, event);">
+  <img src="photo4.jpg" alt="mim20" width="110" height="90"/>
+  </a>
+  <div class="desc">This was the first photo I had published in Western Mail</div>
+
+  </div>
+</div>
+
+<div id="container">
+<!-- Say when modified -->
+<script type="text/javascript">
+	var lm = new Date(document.lastModified);
+	var ukDate = lm.toLocaleString();
+    document.write(  "This page was last updated on: " + lm);
+</script>
+</div>
+
+
+<p id="validation">	
+
+	<a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml11"
+        alt="Valid XHTML 1.1!" height="31" width="88" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+
+</p>
+
+</body>
+</html>
+
