@@ -2,19 +2,19 @@
 <!-- Alien plain tytpe font -->
 @font-face {
     font-family: alienleague;
-    src: url(fonts/alienleagueii.ttf) format("opentype");   
+    src: url(Fonts/alienleagueii.ttf) format("opentype");   
 }
 
 <!-- destructo plain -->
 @font-face {
 	font-family: destructobeambb;
-	src:url(fonts/destructobeambb_bold.tff) format("opentype");
+	src:url(Fonts/destructobeambb_bold.tff) format("opentype");
 	}
 
 <!-- Destructo with paint effect -->
 @font-face {
     font-family: Destructo;
-    src: url(fonts/NoLicense_R-2014_Eroded.ttf) format("opentype");
+    src: url(Fonts/NoLicense_R-2014_Eroded.ttf) format("opentype");
 }
 
 
@@ -38,7 +38,7 @@ div#menu {
    left:0px;
 }
 h1#cvh1{
-   font-family: alienleague;
+   font-family: destructobeambb;
    font-size: 45px;
   
 }
@@ -54,7 +54,7 @@ h3#cvh3{
 }
 
 #Mainmenutitle{
-font-family: Destructo;
+font-family: destructobeambb;
 color:#66FF00;
 background-color:black;
 
@@ -83,7 +83,7 @@ p#cvaddress {
   
 body {
   padding-left: 12em;
-  font-family:  Caudexreg;
+  font-family:  destructobeambb;
  
   background: url(wallpaper.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
