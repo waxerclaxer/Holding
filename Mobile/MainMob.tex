@@ -1,7 +1,7 @@
 
 
 \documentclass{report}
-
+\usepackage{titlesec}
 
 
 \begin{document}
@@ -29,17 +29,32 @@ Choosing the correct hardware will define the overall practicality of the projec
 Both prototyping and final design will be discussed in separate stages to provide a structured design to the final product.
 The three main sensing components that will be used will be a gyroscope, accelerometer and a magnetometer. Using all three allows for greater results. When combined together the accelerometer and gyroscope will work with each other to provide the pitch and roll. To receive the yaw result the manometer will be used.
 
-\section{Breakout Boards}
+\section{Breakout Board Prototype}
 For the prototyping breakout board will be used. By creating the prototype using breakout boards
  
 \subsection{Micro-controller}
 
 \subsection{Gyroscope}
 The gyroscope that will be used in the prototype will be the Triple-Axis Digital-Output Gyro ITG-3200 breakout board. By using the inter-integrated 
-  This particular model has been chosen due to the completeness of the device and it flexible power consumption rate.
+ his particular model has been chosen due to the completeness of the device and it flexible power consumption rate.
+\subsection{Accelerometer}
+The triple axis MMA8452Q break out board will be sourced for the prototype. One of the great features of this particular device is the ability to stay in low power mode until told otherwise. This will save power and can be incorporated with possibly another embedded device such as the barometer or a simple switch to swap between power modes.
+\subsection{Magnetometer}
+Triple Axis Magnetometer Breakout - MAG3110 will be sourced for the magnetometer. This particular board comes with its own voltage regulator opposed to its main competitor, HMC5883L, which does not. This allows for a wider spectrum of voltage control 
+\subsection{SD Card Reader}
+SD cards are non volatile storage. This allows information to be stored even when the device is not under direct power. The ability to remove the storage device will allow the user to retrieve the data collected and upgrade the devices storage. The component used for prototyping will be Breakout Board for microSD Transflash. This product will also be sourced out for the final design.
+
+
+
+\section{End Product Specification}
+
+\subsection{Micro-controller}
+
+\subsection{Gyroscope}
+
 \subsection{Accelerometer}
 
-
+\subsection{Magnetometer}
 
 
 
