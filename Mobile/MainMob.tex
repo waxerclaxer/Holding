@@ -28,7 +28,7 @@ Both prototyping and final design will be discussed in separate stages to provid
 The three main sensing components that will be used will be a gyroscope, accelerometer and a magnetometer. Using all three allows for greater results. When combined together the accelerometer and gyroscope will work with each other to provide the pitch and roll. To receive the yaw result the manometer will be used.
 
 \section{Breakout Board Prototype}
-For the prototyping breakout board will be used. By creating the prototype using breakout boards it is possible to have a more practical and faster way to make the product. It will also be good to study the way that they are put together to then efficently create the final product.
+For the prototyping breakout board will be used. By creating the prototype using breakout boards it is possible to have a more practical and faster way to make the product. It will also be good to study the way that they are put together to then efficiently create the final product. A great advantage of using break out for the prototyping is that they include any resistors or capacitors that may be needed to reduce noise on the device. This will be considered when creating the final design, hopefully based on some ideas that the break out boards provide.
  
 \subsection{Micro-controller}
 The micro-controller is chosen due to the sensors that are needed. Available EEPROM memory is taken in to account to store system files. The micro controller that will be used for the prototype is PIC16F818. 
@@ -84,7 +84,7 @@ The aim goal for the power is small and rechargeable. With this in mind the ANSM
 \section{Final Product Specification}
 
 \subsection{Micro-controller}
-The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient.
+The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $I2^C$ connections.
 \begin{itemize}
 \item 128 bytes of EEPROM data memory
 \item 2 to 5.5 voltage
@@ -93,16 +93,22 @@ The micro controller that will be used for the prototype is PIC16F818. This is t
 \begin{center}
   \begin{tabular}{ |l | c | r |}
     \hline
-    Amount & Price With VAT & Price W/O VAT \\ \hline
+    Amount & Price W/O VAT £ & Price £ \\ \hline
     1 & 1.58 & 1.90 \\ \hline
     10 & 1.33 & 1.60 \\ \hline
     100 & 1.22 & 1.46   \\ \hline
   \end{tabular}
 \end{center}
 
-\subsection{Gyroscope}
+\subsection{Gyroscope and Accelerometer}
+STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is the connections used will be less. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode.
+\begin{itemize}
+\item 2.4 - 3.6 voltage 
+\item 
+\end{itemize}
 
-\subsection{Accelerometer}
+
+
 
 \subsection{Magnetometer}
 
