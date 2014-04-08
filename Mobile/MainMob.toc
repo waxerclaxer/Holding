@@ -11,5 +11,5 @@
 \contentsline {section}{\numberline {1.2}Final Product Specification}{5}
 \contentsline {subsection}{\numberline {1.2.1}Micro-controller}{5}
 \contentsline {subsection}{\numberline {1.2.2}Gyroscope and Accelerometer}{5}
-\contentsline {subsection}{\numberline {1.2.3}Magnetometer}{5}
-\contentsline {chapter}{\numberline {2}Control Algorithm and Software}{6}
+\contentsline {subsection}{\numberline {1.2.3}Magnetometer}{6}
+\contentsline {chapter}{\numberline {2}Control Algorithm and Software}{7}
