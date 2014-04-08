@@ -2,13 +2,15 @@
 \contentsline {chapter}{\numberline {1}Hardware Selection and Design}{3}
 \contentsline {section}{\numberline {1.1}Breakout Board Prototype}{3}
 \contentsline {subsection}{\numberline {1.1.1}Micro-controller}{3}
-\contentsline {subsection}{\numberline {1.1.2}Gyroscope}{3}
-\contentsline {subsection}{\numberline {1.1.3}Accelerometer $i^2c$}{4}
-\contentsline {subsection}{\numberline {1.1.4}Magnetometer}{4}
-\contentsline {subsection}{\numberline {1.1.5}Barometer}{4}
-\contentsline {subsection}{\numberline {1.1.6}SD Card Reader}{4}
-\contentsline {section}{\numberline {1.2}Final Product Specification}{4}
-\contentsline {subsection}{\numberline {1.2.1}Micro-controller}{4}
-\contentsline {subsection}{\numberline {1.2.2}Gyroscope}{4}
-\contentsline {subsection}{\numberline {1.2.3}Accelerometer}{4}
-\contentsline {subsection}{\numberline {1.2.4}Magnetometer}{4}
+\contentsline {subsection}{\numberline {1.1.2}Gyroscope $i^2c$ connector}{4}
+\contentsline {subsection}{\numberline {1.1.3}Accelerometer $i^2c$ connector}{4}
+\contentsline {subsection}{\numberline {1.1.4}Magnetometer $i^2c$ connector}{4}
+\contentsline {subsection}{\numberline {1.1.5}Barometer $i^2c$ connector}{4}
+\contentsline {subsection}{\numberline {1.1.6}SD Card Reader}{5}
+\contentsline {subsection}{\numberline {1.1.7}Power}{5}
+\contentsline {section}{\numberline {1.2}Final Product Specification}{5}
+\contentsline {subsection}{\numberline {1.2.1}Micro-controller}{5}
+\contentsline {subsection}{\numberline {1.2.2}Gyroscope}{5}
+\contentsline {subsection}{\numberline {1.2.3}Accelerometer}{5}
+\contentsline {subsection}{\numberline {1.2.4}Magnetometer}{5}
+\contentsline {chapter}{\numberline {2}Control Algorithm and Software}{6}

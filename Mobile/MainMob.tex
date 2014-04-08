@@ -1,15 +1,13 @@
 
-
 \documentclass{report}
 
 
 
 \begin{document}
-\title{The Possibilities in the Collection and Recording of Data For the Study and Improvement of Sky Diving and Formation forming}
+\title{Collection and Recording of Data For the Study and Improvement of Sky Diving and Formation forming}
 \author{Michael Mason}
 
 \maketitle
-
 \begin{abstract}
 When skydiving the ability to record data of the jump is essential when jumping in formation. With the use of inertial measurement units (IMU) it is possible to gain a better understanding of the technique used and improve on form. With the use of sensing equipment such as ; Magnetometer, accelerometer, gyroscope it is possible to get accurate results of pitch, yaw and roll. The choice of a good micro-controller will determine the over all efficiency.
 Storing this data and being able to access it either between jumps or after a day of jumping is essential. Making this easy for the user to attain will be looked at in the form of SD cards and direct link. Blue-tooth will also be discussed.
@@ -30,27 +28,77 @@ Both prototyping and final design will be discussed in separate stages to provid
 The three main sensing components that will be used will be a gyroscope, accelerometer and a magnetometer. Using all three allows for greater results. When combined together the accelerometer and gyroscope will work with each other to provide the pitch and roll. To receive the yaw result the manometer will be used.
 
 \section{Breakout Board Prototype}
-For the prototyping breakout board will be used. By creating the prototype using breakout boards. 
+For the prototyping breakout board will be used. By creating the prototype using breakout boards it is possible to have a more practical and faster way to make the product. It will also be good to study the way that they are put together to then efficently create the final product.
  
 \subsection{Micro-controller}
+The micro-controller is chosen due to the sensors that are needed. Available EEPROM memory is taken in to account to store system files. The micro controller that will be used for the prototype is PIC16F818. 
+\begin{itemize}
+\item 128 bytes of EEPROM data memory
+\item 2 to 5.5 voltage
+\item $i^2c$
+\end{itemize}
 
 \subsection{Gyroscope $i^2c$ connector}
 The gyroscope that will be used in the prototype will be the Triple-Axis Digital-Output Gyro ITG-3200 breakout board. By using the inter-integrated 
- his particular model has been chosen due to the completeness of the device and it flexible power consumption rate.
+This particular model has been chosen due to the completeness of the device and it flexible power consumption rate.
+\begin{itemize}
+\item voltage range of 2.1V to 3.6V
+\item Fast Mode $I^2C$ (400kHz) serial interface
+\end{itemize}
 \subsection{Accelerometer $i^2c$ connector}
 The triple axis MMA8452Q break out board will be sourced for the prototype. One of the great features of this particular device is the ability to stay in low power mode until told otherwise. This will save power and can be incorporated with possibly another embedded device such as the barometer or a simple switch to swap between power modes.
+\begin{itemize}
+\item ±2g/±4g/±8g dynamically selectable full-scale
+\item I2C digital output interface
+\item 1.6 V to 3.6 V interface voltage
+\end{itemize}
+
 \subsection{Magnetometer $i^2c$ connector}
-Triple Axis Magnetometer Breakout - MAG3110 will be sourced for the magnetometer. This particular board comes with its own voltage regulator opposed to its main competitor, HMC5883L, which does not. This allows for a wider spectrum of voltage control 
+Triple Axis Magnetometer Breakout - MAG3110 will be sourced for the magnetometer. This particular board comes with its own voltage regulator opposed to its main competitor, HMC5883L, which does not. This allows for a wider spectrum of voltage control .
+\begin{itemize}
+\item 1.95V to 3.6V Supply Voltage
+\item 7-bit I2C address = 0x0E
+\end{itemize}
+
 \subsection{Barometer $i^2c$ connector}
 Barometric Pressure Sensor - BMP180 Breakout will be used to measure pressure. This will be used to measure the altitude of the device. 
+\begin{itemize}
+\item Digital two wire (I²C, TWI, "Wire")
+\item Ultra-low power consumption - Flexible supply voltage range (1.8V to 3.6V)
+\end{itemize}
+
 \subsection{SD Card Reader}
 SD cards are non volatile storage. This allows information to be stored even when the device is not under direct power. The ability to remove the storage device will allow the user to retrieve the data collected and upgrade the devices storage. The component used for prototyping will be Breakout Board for microSD Transflash. This product will also be sourced out for the final design.
+To 
+
+\subsection{Power}
+The aim goal for the power is small and rechargeable. With this in mind the ANSMANN 3.7V Wire lead terminal has been chosen.
+\begin{itemize}
+\item 3.7v nominal
+\item 2250mAh
+\item Lithium-Ion
+\end{itemize}
 
 
 
 \section{Final Product Specification}
 
 \subsection{Micro-controller}
+The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient.
+\begin{itemize}
+\item 128 bytes of EEPROM data memory
+\item 2 to 5.5 voltage
+\item $i^2c$
+\end{itemize}
+\begin{center}
+  \begin{tabular}{ |l | c | r |}
+    \hline
+    Amount & Price With VAT & Price W/O VAT \\ \hline
+    1 & 1.58 & 1.90 \\ \hline
+    10 & 1.33 & 1.60 \\ \hline
+    100 & 1.22 & 1.46   \\ \hline
+  \end{tabular}
+\end{center}
 
 \subsection{Gyroscope}
 
@@ -59,6 +107,9 @@ SD cards are non volatile storage. This allows information to be stored even whe
 \subsection{Magnetometer}
 
 
+
+
+\chapter{Control Algorithm and Software}
 
 
  
