@@ -13,5 +13,5 @@
 \contentsline {subsection}{\numberline {1.2.2}Gyroscope and Accelerometer}{5}
 \contentsline {subsection}{\numberline {1.2.3}Magnetometer}{6}
 \contentsline {subsection}{\numberline {1.2.4}Barometer}{6}
-\contentsline {subsection}{\numberline {1.2.5}Power}{6}
-\contentsline {chapter}{\numberline {2}Control Algorithm and Software}{7}
+\contentsline {subsection}{\numberline {1.2.5}Power}{7}
+\contentsline {chapter}{\numberline {2}Control Algorithm and Software}{8}
