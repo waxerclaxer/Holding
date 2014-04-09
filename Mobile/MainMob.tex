@@ -3,8 +3,8 @@
 \usepackage{geometry}
 %\usepackage{layout}
 \usepackage{graphicx}
-\setlength{\voffset}{-0.75in}
-\setlength{\headsep}{5pt}
+
+\setlength{\headsep}{1pt}
 
 
 \begin{document}
@@ -13,6 +13,8 @@
 \author{Michael Mason}
 
 \maketitle
+
+
 \begin{abstract}
 When skydiving the ability to record data of the jump is essential when jumping in formation. With the use of inertial measurement units (IMU) it is possible to gain a better understanding of the technique used and improve on form. With the use of sensing equipment such as ; Magnetometer, accelerometer, gyroscope it is possible to get accurate results of pitch, yaw and roll. The choice of a good micro-controller will determine the over all efficiency.
 Storing this data and being able to access it either between jumps or after a day of jumping is essential. Making this easy for the user to attain will be looked at in the form of SD cards and direct link. Blue-tooth will also be discussed.
@@ -123,7 +125,7 @@ STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. A
 \end{center}
 
 \subsection{Magnetometer}
-MEMSIC - MMC3280MS magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2C$ bus, it eliminates the need for any A/D converters.
+MEMSIC - MMC3280MS magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2C$ bus, it eliminates the need for any A/D converters. Running at 
 
 \begin{itemize}
 \item $accuracy^2$ ~ min = +-2.0 / max +- 5.0 degrees 
@@ -179,6 +181,21 @@ MEMS-LPS331AP has been chosen. Due to its ability to operate at -40 degrees this
 	\end{tabular}
 \end{center}
 
+\subsubsection{Power Requirements}
+To work out the amount of power required and justify the correct choice of cell/battery the calculation seen in 1.1  will be used to convert microamp to micro amp hours. By doing this on each sensor and micro controller it is possible to get a better understanding of what batter is needed.
+
+\begin{equation}
+10^{-6} \times \mu Ah \times 60 \times 60
+\end{equation}
+
+The results for each were as follows; 
+\begin{itemize}
+\item Micro-controller - 0.313 $\mu Ah$
+\item Gyroscope and accelerometer 0.061 - $\mu Ah$
+\item Magnetometer - 1.98  $\mu Ah$
+\item Barometer 0.108 - $\mu Ah$
+\end{itemize}
+
 \subsection{Notification}
 To notify the user of the current state of the product a single LED will be used, TruOpto High Intensity LED White. The benefits using one LED will be shown in the state diagram. When the device is on the LED will show a solid color. When the device is recording data it will flash at periodic intervals. As the data is not transferred from the device, but rather through the medium of a removable SD card, there is no need to indicate to the user if the device is transferring. Solid color = on, flashing light = recording. 
 This also allows the device not to have a LED constantly on. If the flash was to be every 5 seconds, on a days worth of jumping this would save battery life.
@@ -193,10 +210,18 @@ This also allows the device not to have a LED constantly on. If the flash was to
 	\end{tabular}
 \end{center}
 
-
+\newpage
 \section{Description and Diagram of the Interconnections}
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=135mm]{MainImage.png}
+\caption{Diagram of the interconnections}
+\label{overflow}
+\end{figure}
 
+\subsection{Reasons of Choice}
+The reasons in choice for the type of serial bus was down to the flexibility and available parts. Building the project with $I2^C$ in mind allowed for a more straight forward approach in connecting to the micro-controller. 
 
 \chapter{Control Algorithm and Software}
 
