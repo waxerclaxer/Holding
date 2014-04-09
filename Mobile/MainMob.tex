@@ -1,9 +1,14 @@
 
 \documentclass{report}
+\usepackage{geometry}
+%\usepackage{layout}
 
+\setlength{\voffset}{-0.75in}
+\setlength{\headsep}{5pt}
 
 
 \begin{document}
+
 \title{Collection and Recording of Data For the Study and Improvement of Sky Diving and Formation forming}
 \author{Michael Mason}
 
@@ -84,14 +89,14 @@ The aim goal for the power is small and rechargeable. With this in mind the ANSM
 \section{Final Product Specification}
 
 \subsection{Micro-controller}
-The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $I2^C$ connections.
+The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $I2^C$ connections. It allows for selectable selectable frequencies, including 31.25 kHz, 125 kHz,250 kHz, 500 kHz, 1 MHz, 2 MHz, 4 MHz and 8 MHz from the RC oscillator. This will enable the ability to select the most efficient frequency and will save power usage. 
 \begin{itemize}
 \item 128 bytes of EEPROM data memory
 \item 2 to 5.5 voltage
 \item $i^2c$
 \end{itemize}
 \begin{center}
-  \begin{tabular}{ |l | c | r |}
+  \begin{tabular}{ | l | c | r |}
     \hline
     Amount & Price W/O VAT £ & Price £ \\ \hline
     1 & 1.58 & 1.90 \\ \hline
@@ -110,7 +115,7 @@ STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. A
 \end{itemize}
 
 \begin{center}
-  \begin{tabular}{ |l | c | r |}
+  \begin{tabular}{ | l | c | r |}
     \hline
     Amount & Price W/O VAT £ & Price £ \\ \hline
     1 & 4.69 & 5.63 \\ \hline
@@ -120,12 +125,44 @@ STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. A
 \end{center}
 
 \subsection{Magnetometer}
+MEMSIC - MMC3280MS magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2C$ bus, it eliminates the need for any A/D converters.
+
+\begin{itemize}
+\item $accuracy^2$ ~ min = +-2.0 / max +- 5.0 degrees 
+\item voltage 1.6 - 3.7 volts. Typical 1.6
+\item -8/+8 gauss
+\end{itemize}
+
+\begin{center}
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    Amount & Price W/O VAT £ & Price with VAT £ \\ \hline
+    1 & 6.90 & 8.28 \\ \hline
+    10 & 5.30 & 6.36 \\ \hline
+    100 & 4.32 & 5.18 \\ \hline
+	\end{tabular}
+\end{center}
 
 \subsection{Barometer}
 
 
-\subsection{Power}
 
+\subsection{Power}
+ ANSMANN 3.7V Wire lead terminal type has been chosen. As used in the prototype, Having researched further into the price and size this battery is most suitable. The advantages of lithium ion mean that this particular battery meqans that it will not need prolonged priming when bought One normal charge will suffice. This will help with sales of the device at the jump centres as they can be used when purchased.
+\begin{itemize}
+\item 3.7v nominal
+\item 2250mAh
+\item Lithium-Ion
+\end{itemize}
+
+\begin{center}
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    Amount & Price W/O VAT £ & Price with VAT £ \\ \hline
+    1 & - & 16.96 \\ \hline
+    20 & - & 15.94 \\ \hline
+	\end{tabular}
+\end{center}
 
 
 \chapter{Control Algorithm and Software}
