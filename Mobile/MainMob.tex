@@ -2,7 +2,7 @@
 \documentclass{report}
 \usepackage{geometry}
 %\usepackage{layout}
-
+\usepackage{graphicx}
 \setlength{\voffset}{-0.75in}
 \setlength{\headsep}{5pt}
 
@@ -23,9 +23,6 @@ Making the device energy efficient and possibilities of scavenging energy from w
 \tableofcontents
 
 \newpage
-
-\section{Introduction}
-
 
 \chapter{Hardware Selection and Design}
 Choosing the correct hardware will define the overall practicality of the project. Several factors have to be taken into consideration when selecting hardware such as functionality, connections, power consumption and size with many more. These will be discussed in detail and compared to other products with indication why they were chosen over them. What storage is used for the device and the format in which it is stored in will be discussed
@@ -182,10 +179,33 @@ MEMS-LPS331AP has been chosen. Due to its ability to operate at -40 degrees this
 	\end{tabular}
 \end{center}
 
+\subsection{Notification}
+To notify the user of the current state of the product a single LED will be used, TruOpto High Intensity LED White. The benefits using one LED will be shown in the state diagram. When the device is on the LED will show a solid color. When the device is recording data it will flash at periodic intervals. As the data is not transferred from the device, but rather through the medium of a removable SD card, there is no need to indicate to the user if the device is transferring. Solid color = on, flashing light = recording. 
+This also allows the device not to have a LED constantly on. If the flash was to be every 5 seconds, on a days worth of jumping this would save battery life.
+
+\begin{center}
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    Amount & Price W/O VAT £ & Price with VAT £ \\ \hline
+    1 & 0.476 & 0.572 \\ \hline
+    10 & 0.368 & 0.266 \\ \hline
+    100 & 0.256 & 0.307 \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\section{Description and Diagram of the Interconnections}
+
+
 
 \chapter{Control Algorithm and Software}
 
 
+  
+  
+  
+  
+  
   \begin{thebibliography}{1}
 
   \bibitem [1] Texas Instruments, “High speed CMOS logic analog
