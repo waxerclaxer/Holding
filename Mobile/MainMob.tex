@@ -24,7 +24,7 @@ Making the device energy efficient and possibilities of scavenging energy from w
 
 \tableofcontents
 
-\newpage
+
 
 \chapter{Hardware Selection and Design}
 Choosing the correct hardware will define the overall practicality of the project. Several factors have to be taken into consideration when selecting hardware such as functionality, connections, power consumption and size with many more. These will be discussed in detail and compared to other products with indication why they were chosen over them. What storage is used for the device and the format in which it is stored in will be discussed
@@ -314,10 +314,14 @@ One of the main features this provides but will not be used in a temperature sen
 The idea was to create a prototype device device before tackling the main unit to give a better insight into how the device will be made. The prototype was made from breakout boards. This allowed focus to be given in the understanding of the how and why the components would work with each other. It also allows for a cheap and effective way to create a strong and stable working unit before sourcing out other components. The idea was to study the components from the breakout boards with the idea that they would work. they come with recommended resistors that, most probably, the company has recommended to use in sync with the devices to reduce noise. Again, this is extremely useful when building a device for the first time.
 When looking at building the final device studying data sheets and the price was the key drive into the selection. Looking for key functionality and appropriate pricing would allow for the device to me made on a larger scale with a better overhead. It was also necessary to keep an eye out at extra functionary with the MKII device in mind but not essential.
   
-\subsubsection{Debugging}
+\subsection{Debugging}
 The implementation and testing of the device will be done in stages. Each sensor will run and be tested to ensure that the correct calibration and the correct data is being recorded. Making sure that the micro-controller works by running a simple, known to work, program will ensure that the other sensory equipment will recorded precisely. 
 Testing each one of the components with the micro-controller and a smaller version of the final program will ensure each component works correctly. Physical testing of the equipment will also ensure that no dud readings are being stored to corrupt further data. 
 All the initial testing will be done on a break out board or 'bread-board' equivalent. Then after this a PCB may be printed for the final design .
+
+\subsubsection{Additional}
+A library  may be used to call upon for the more complex areas of the code. This ties in with the amount of storage needed on the device. This is all dependent of the code needed to run and process the calculations. 
+To use the device in the field it is important to understand the states the device will be in. Have the device on standby until the point of jumping, at which point put the device in to recording mode. When the device goes back into standby mode it is then ready to recoreded again, as the data has been safely moved to the microSD card. 
   
   
   

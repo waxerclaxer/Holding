@@ -32,4 +32,5 @@
 \contentsline {subsubsection}{Gyroscope and Accelerometer}{11}
 \contentsline {subsubsection}{Barometer}{11}
 \contentsline {section}{\numberline {2.4}Approach and Implementation to Design}{11}
-\contentsline {subsubsection}{Debugging}{12}
+\contentsline {subsection}{\numberline {2.4.1}Debugging}{12}
+\contentsline {subsubsection}{Additional}{12}
