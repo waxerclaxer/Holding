@@ -47,7 +47,7 @@ The gyroscope that will be used in the prototype will be the Triple-Axis Digital
 This particular model has been chosen due to the completeness of the device and it flexible power consumption rate.
 \begin{itemize}
 \item voltage range of 2.1V to 3.6V
-\item Fast Mode $I^2C$ (400kHz) serial interface
+\item Fast Mode $i^2c$ (400kHz) serial interface
 \end{itemize}
 \subsection{Accelerometer $i^2c$ connector}
 The triple axis MMA8452Q break out board will be sourced for the prototype. One of the great features of this particular device is the ability to stay in low power mode until told otherwise. This will save power and can be incorporated with possibly another embedded device such as the barometer or a simple switch to swap between power modes.
@@ -88,7 +88,7 @@ The aim goal for the power is small and rechargeable. With this in mind the ANSM
 \section{Final Product Specification}
 
 \subsection{Micro-controller}
-The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $I2^C$ connections. It allows for selectable selectable frequencies, including 31.25 kHz, 125 kHz,250 kHz, 500 kHz, 1 MHz, 2 MHz, 4 MHz and 8 MHz from the RC oscillator. This will enable the ability to select the most efficient frequency and will save power usage. 
+The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $i^2c$ connections. It allows for selectable selectable frequencies, including 31.25 kHz, 125 kHz,250 kHz, 500 kHz, 1 MHz, 2 MHz, 4 MHz and 8 MHz from the RC oscillator. This will enable the ability to select the most efficient frequency and will save power usage. 
 \begin{itemize}
 \item 128 bytes of EEPROM data memory
 \item 2 to 5.5 voltage
@@ -105,7 +105,7 @@ The micro controller that will be used for the prototype is PIC16F818. This is t
 \end{center}
 
 \subsection{Gyroscope and Accelerometer}
-STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is the connections used will be less. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode. Is supported by a $1^2C$ connector. 
+STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is the connections used will be less. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode. Is supported by a $i^2c$ connector. 
 \begin{itemize}
 \item 2.4 - 3.6 voltage 
 \item Gyroscope -  ± 250°/s, ± 500°/s, ± 2000°/s
@@ -125,7 +125,7 @@ STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. A
 \end{center}
 
 \subsection{Magnetometer}
-MEMSIC - MMC3280MS magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2C$ bus, it eliminates the need for any A/D converters. Running at 
+MEMSIC - MMC33160MT magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2c$ bus, it eliminates the need for any A/D converters. 
 
 \begin{itemize}
 \item $accuracy^2$ ~ min = +-2.0 / max +- 5.0 degrees 
@@ -145,7 +145,7 @@ MEMSIC - MMC3280MS magnetometer has been selected. This particular device takes 
 \end{center}
 
 \subsection{Barometer}
-MEMS-LPS331AP has been chosen. Due to its ability to operate at -40 degrees this particular model is better than some other that were looked at that would not operate below 0 degrees. It has a operating voltage of around 1.7 volts which matched nicely with the other sensing components. With both SPI and $I2^C$ I/O, makes it extremely practical for the micro-controller used. Its ability to work to 35,000 feet means that it has plenty of operating space for this product, which has been designed with 10,000 feet in mind.
+MEMS-LPS331AP has been chosen. Due to its ability to operate at -40 degrees this particular model is better than some other that were looked at that would not operate below 0 degrees. It has a operating voltage of around 1.7 volts which matched nicely with the other sensing components. With both SPI and $i^2c$ I/O, makes it extremely practical for the micro-controller used. Its ability to work to 35,000 feet means that it has plenty of operating space for this product, which has been designed with 10,000 feet in mind.
 
 \begin{itemize}
 \item 1.71 V to 3.6 V
@@ -163,12 +163,34 @@ MEMS-LPS331AP has been chosen. Due to its ability to operate at -40 degrees this
 	\end{tabular}
 \end{center}
 
+\subsection{SD Reader}
+SD reader 798-DM3CSSF has been chosen as the storage of the device. Due to its large capacity and small, light weight size its a great source of storage. Micro SD typically operates at 100mb read and write speed and allows for flexibility in the amount of data that is written. 0-4 lines can be done simultaneously depending on the requirements and voltage regulations. Only one line will need to be written at a time and comma spacing will be used to separate the data for each separate recording while in the free fall. 
+\begin{itemize}
+\item Can retain data without power
+\item Are rewritable
+\item Will store large volumes of data on jumps
+\end{itemize}
+
+\begin{center}
+  \begin{tabular}{ | l | c | r |}
+    \hline
+    Amount & Price W/O VAT £ & Price with VAT £ \\ \hline
+    1 & - & 1.21 \\ \hline
+    10 & - & 1.00 \\ \hline
+    100 & - & 0.618 \\ \hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{MicroSd Card}
+A 2GB Micro SD Flash memory card will be supplied with the unit. This will have an operating voltage between 2-3.7v and will use 100 $\mu A$.
+One unit will cost £4.99 and will be supplied with the device.
+
 
 \subsection{Power}
- ANSMANN 3.7V Wire lead terminal type has been chosen. As used in the prototype, Having researched further into the price and size this battery is most suitable. The advantages of lithium ion mean that this particular battery meqans that it will not need prolonged priming when bought One normal charge will suffice. This will help with sales of the device at the jump centres as they can be used when purchased.
+ BAK 103450AR2 wire lead type has been chosen. As used in the prototype, Having researched further into the price and size this battery is most suitable. The advantages of lithium ion mean that this particular battery means that it will not need prolonged priming when bought One normal charge will suffice. This will help with sales of the device at the jump centres as they can be used when purchased.
 \begin{itemize}
 \item 3.7v nominal
-\item 2250mAh
+\item 1.8Ah
 \item Lithium-Ion
 \end{itemize}
 
@@ -181,20 +203,21 @@ MEMS-LPS331AP has been chosen. Due to its ability to operate at -40 degrees this
 	\end{tabular}
 \end{center}
 
-\subsubsection{Power Requirements}
-To work out the amount of power required and justify the correct choice of cell/battery the calculation seen in 1.1  will be used to convert microamp to micro amp hours. By doing this on each sensor and micro controller it is possible to get a better understanding of what batter is needed.
+\subsubsection{Power Requirements} 
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c | r |}
+\hline
+  Components&Current $\mu A$&Amp hours&Voltage&Energy\\ \hline
+   Micro-Controller& 87 & 0.3132 & 2& 0.6624  \\ \hline
+   Magnetometer& 900 & 3.24 & 3.6   &11.66  \\ \hline
+   Accelerometer/Gyroscope&6111 & 2.1996 &1.8    &39.59 \\ \hline
+   SD card& 100 &0.36  & 3.6   & 1.29   \\ \hline
+   Barometer&30  &0.108  &  1.8 & 0.19 \\ \hline
+   Total&7228 &26.0208  & 3.6  &53.38  \\ \hline
+  	\end{tabular}
+\end{center}
 
-\begin{equation}
-10^{-6} \times \mu Ah \times 60 \times 60
-\end{equation}
-
-The results for each were as follows; 
-\begin{itemize}
-\item Micro-controller - 0.313 $\mu Ah$
-\item Gyroscope and accelerometer 0.061 - $\mu Ah$
-\item Magnetometer - 1.98  $\mu Ah$
-\item Barometer 0.108 - $\mu Ah$
-\end{itemize}
+Power requirements of each sensor have been taken as the maximum needed and used to calculate the total energy that will be used by the device. A total of 337229.566 J of energy will be used by the device per hour. 
 
 \subsection{Notification}
 To notify the user of the current state of the product a single LED will be used, TruOpto High Intensity LED White. The benefits using one LED will be shown in the state diagram. When the device is on the LED will show a solid color. When the device is recording data it will flash at periodic intervals. As the data is not transferred from the device, but rather through the medium of a removable SD card, there is no need to indicate to the user if the device is transferring. Solid color = on, flashing light = recording. 
@@ -215,17 +238,43 @@ This also allows the device not to have a LED constantly on. If the flash was to
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=135mm]{MainImage.png}
+\includegraphics[width=115mm]{MainImage.png}
 \caption{Diagram of the interconnections}
 \label{overflow}
 \end{figure}
 
 \subsection{Reasons of Choice}
-The reasons in choice for the type of serial bus was down to the flexibility and available parts. Building the project with $I2^C$ in mind allowed for a more straight forward approach in connecting to the micro-controller. 
+The reasons in choice for the type of serial bus was down to the flexibility and available parts. Building the project with $I2^C$ in mind allowed for a more straight forward approach in connecting to the micro-controller. Inter integrated circuit controller or $I2^C$ is more recent than SPI and has more flexibility in particular areas such as;
 
+\begin{itemize}
+\item Analogue to digital / digital to analogue conversion 
+\item Use with memory chips such as EEPROM, RAM, FERAM, Flash
+\item Use with other micro controller (may be required for MKII)
+\end{itemize}
+
+When information is requested from the device it is sent down the same bus. 7 bits are used in the address and the remaining bit is used to indicate weather the master wished to read or write the data.
+One of the main disadvantages that $I2^C$ has in comparison to SPI is the data transfer rate of up to 10MHz as opposed to the normal rate of 400KHz. 
+
+As seen in diagram 1.1 the basic connections for all the main sensory equipment can be seen. Due to the use of the same $i^2c$ connection it is possible to connect to the same pin. 
+
+
+\newpage
 \chapter{Control Algorithm and Software}
 
+\section{Operating modes}
+The device will try to be as simplistic as possible to use. By having the main states; Off, Standby and Recording, it will use LED to indicate what the device is doing. As the device is in standby mode it will be in low power mode ready  to move to the recording state. When in the recording state, transfer of the data collected will be wrote straight to the microSD card. The LED will be a solid colour of yellow when the device is on. To indicate that the device is recording data the LED will be flash the same yellow. Along side the yellow light a flashing red will indicate that data is being wrote to the microSD card. This means that the user will see a red/yellow intermittent flash when in the jump. This system has be inspired by the ipod shuffle that does not have a screen but is able to indicate its current state very efficiently.
 
+
+ \begin{figure}[ht!]
+\centering
+\includegraphics[width=115mm]{ImageFlow.png}
+\caption{Operating Modes}
+\label{overflow}
+\end{figure}
+ 
+ 
+  
+  
   
   
   
