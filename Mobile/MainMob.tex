@@ -42,14 +42,14 @@ The micro-controller is chosen due to the sensors that are needed. Available EEP
 \item $i^2c$
 \end{itemize}
 
-\subsection{Gyroscope $i^2c$ connector}
+\subsection{Gyroscope}
 The gyroscope that will be used in the prototype will be the Triple-Axis Digital-Output Gyro ITG-3200 breakout board. By using the inter-integrated 
 This particular model has been chosen due to the completeness of the device and it flexible power consumption rate.
 \begin{itemize}
 \item voltage range of 2.1V to 3.6V
 \item Fast Mode $i^2c$ (400kHz) serial interface
 \end{itemize}
-\subsection{Accelerometer $i^2c$ connector}
+\subsection{Accelerometer}
 The triple axis MMA8452Q break out board will be sourced for the prototype. One of the great features of this particular device is the ability to stay in low power mode until told otherwise. This will save power and can be incorporated with possibly another embedded device such as the barometer or a simple switch to swap between power modes.
 \begin{itemize}
 \item ±2g/±4g/±8g dynamically selectable full-scale
@@ -57,14 +57,14 @@ The triple axis MMA8452Q break out board will be sourced for the prototype. One 
 \item 1.6 V to 3.6 V interface voltage
 \end{itemize}
 
-\subsection{Magnetometer $i^2c$ connector}
+\subsection{Magnetometer}
 Triple Axis Magnetometer Breakout - MAG3110 will be sourced for the magnetometer. This particular board comes with its own voltage regulator opposed to its main competitor, HMC5883L, which does not. This allows for a wider spectrum of voltage control .
 \begin{itemize}
 \item 1.95V to 3.6V Supply Voltage
 \item 7-bit I2C address = 0x0E
 \end{itemize}
 
-\subsection{Barometer $i^2c$ connector}
+\subsection{Barometer}
 Barometric Pressure Sensor - BMP180 Breakout will be used to measure pressure. This will be used to measure the altitude of the device. 
 \begin{itemize}
 \item Digital two wire (I²C, TWI, "Wire")
@@ -105,7 +105,7 @@ The micro controller that will be used for the prototype is PIC16F818. This is t
 \end{center}
 
 \subsection{Gyroscope and Accelerometer}
-STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is the connections used will be less. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode. Is supported by a $i^2c$ connector. 
+STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is the connections used will be less. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode. Is supported by a $i^2c$ connector. This particular model has the ability to change from low power mode to optimal mode when it is in free fall. This is not going to be exploited in this model but may be considered for the MKII
 \begin{itemize}
 \item 2.4 - 3.6 voltage 
 \item Gyroscope -  ± 250°/s, ± 500°/s, ± 2000°/s
@@ -186,7 +186,7 @@ A 2GB Micro SD Flash memory card will be supplied with the unit. This will have 
 One unit will cost £4.99 and will be supplied with the device.
 
 
-\subsection{Power}
+\subsection{Battery}
  BAK 103450AR2 wire lead type has been chosen. As used in the prototype, Having researched further into the price and size this battery is most suitable. The advantages of lithium ion mean that this particular battery means that it will not need prolonged priming when bought One normal charge will suffice. This will help with sales of the device at the jump centres as they can be used when purchased.
 \begin{itemize}
 \item 3.7v nominal
@@ -217,7 +217,7 @@ One unit will cost £4.99 and will be supplied with the device.
   	\end{tabular}
 \end{center}
 
-Power requirements of each sensor have been taken as the maximum needed and used to calculate the total energy that will be used by the device. A total of 337229.566 J of energy will be used by the device per hour. 
+Power requirements of each sensor have been taken as the maximum needed and used to calculate the total energy that will be used by the device. A total of 53.38  J of energy will be used by the device per hour. 
 
 \subsection{Notification}
 To notify the user of the current state of the product a single LED will be used, TruOpto High Intensity LED White. The benefits using one LED will be shown in the state diagram. When the device is on the LED will show a solid color. When the device is recording data it will flash at periodic intervals. As the data is not transferred from the device, but rather through the medium of a removable SD card, there is no need to indicate to the user if the device is transferring. Solid color = on, flashing light = recording. 
@@ -233,7 +233,10 @@ This also allows the device not to have a LED constantly on. If the flash was to
 	\end{tabular}
 \end{center}
 
-\newpage
+
+\section{Size and Price}
+The size of the product  has been given to the specification of 50mm × 30mm × 15mm. The device will be built around the largest component, the battery. This has the longest length of 50mm so will fit to the specification required.
+The device price per unit will work out at £42.18 per unit. This is based on buying the components at less that 10 per unit.
 \section{Description and Diagram of the Interconnections}
 
 \begin{figure}[ht!]
@@ -252,7 +255,8 @@ The reasons in choice for the type of serial bus was down to the flexibility and
 \item Use with other micro controller (may be required for MKII)
 \end{itemize}
 
-When information is requested from the device it is sent down the same bus. 7 bits are used in the address and the remaining bit is used to indicate weather the master wished to read or write the data.
+When information is requested from the device it is sent down the same bus. 7 bits are used in the address and the remaining bit is used to indicate weather the master wished to read or write the data. This will look somthing like [xxxxxxx1]
+
 One of the main disadvantages that $I2^C$ has in comparison to SPI is the data transfer rate of up to 10MHz as opposed to the normal rate of 400KHz. 
 
 As seen in diagram 1.1 the basic connections for all the main sensory equipment can be seen. Due to the use of the same $i^2c$ connection it is possible to connect to the same pin. 
@@ -261,20 +265,59 @@ As seen in diagram 1.1 the basic connections for all the main sensory equipment 
 \newpage
 \chapter{Control Algorithm and Software}
 
+
 \section{Operating modes}
-The device will try to be as simplistic as possible to use. By having the main states; Off, Standby and Recording, it will use LED to indicate what the device is doing. As the device is in standby mode it will be in low power mode ready  to move to the recording state. When in the recording state, transfer of the data collected will be wrote straight to the microSD card. The LED will be a solid colour of yellow when the device is on. To indicate that the device is recording data the LED will be flash the same yellow. Along side the yellow light a flashing red will indicate that data is being wrote to the microSD card. This means that the user will see a red/yellow intermittent flash when in the jump. This system has be inspired by the ipod shuffle that does not have a screen but is able to indicate its current state very efficiently.
+The device will try to be as simplistic as possible to use. By having the main states; Off, Standby and Recording, it will use LED to indicate what the device is doing. As the device is in standby mode it will be in low power mode ready  to move to the recording state. When in the recording state, transfer of the data collected will be wrote straight to the microSD card. The LED will be a solid colour of yellow when the device is on. To indicate that the device is recording data the LED will be flash the same yellow. Along side the yellow light a flashing red will indicate that data is being wrote to the microSD card. This means that the user will see a red/yellow intermittent flash when in the jump. This system has be inspired by the iPod shuffle that does not have a screen but is able to indicate its current state very efficiently.
+
+\section{Major Functions}
+The micro-controller will have 4 sensory equipment. Each one will collect information and send it direct to the micro-controller where it will then be written to the microSD card. The four main data collecting functions will be;
+
+\begin{itemize}
+\item $COL$-$BARO$
+\item $COL$-$GYRO$
+\item $COL$-$MAG$
+\item $COL$-$ACC$
+\end{itemize}
+
+\subsubsection{$COL$-$BARO$}
+The barometer will collect data on the pressure of the surroundings of the device current hight. This will be measured in bar. Some mathematics will have to be done on the device to convert to pascals so that the user can then work out in feet the hight they were at. Untill the device is tested this will be hard to know if there is enough time to do the maths and right to the microSD card at the same time. 
+\subsubsection{$COL$-$GYRO$}
+The gyroscope will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.
+\subsubsection{$COL$-$MAG$}
+The magnetometer will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.
+\subsubsection{$COL$-$ACC$}
+The accelerometer will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.
 
 
- \begin{figure}[ht!]
+
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=115mm]{ImageFlow.png}
 \caption{Operating Modes}
 \label{overflow}
 \end{figure}
+
+\section{Exploiting the Potential}
  
+ The devices have extra functionality that may or may not be used. All the devices chosen have a low power mode that will be used to out the device into 'standby'. They all have their own unique qualities, some will be discussed but overall they will not be used unless needed or will provide a great improvement to the device as it will use power.
  
+\subsubsection{Micro-controller}
+The micro-controller has a low power mode that will be used for the standby mode. It also supports in system debugging. This will not be used as the device will be tested and perfected and then will not receive updates or change its 'software'. It also boasts 1,000,000 read write cycles to the EEPROM. This again will not be needed at the date is wrote straight to the microSD card.
+
+\subsubsection{Gyroscope and Accelerometer}
+This particular device allows for use of either the accelerometer, the gyroscope or both. For this both will be used but the choice is optional.It also boasts a programmable interrupt device that will start the device when free fall is detected. This could be exploited in the MKII device but for the MKI device, it was built with simplicity in mind but also the ability to improve. With the sleep-to-wake and return to sleep mode, the device can be told when to go into standby mode and when to come out of standby mode. This, again, may be used in the MKII device. 
+
+\subsubsection{Barometer}
+One of the main features this provides but will not be used in a temperature sensor. It will not be used as the device is targeted for 10,000 feet and all the equipment has no problem working to -5 degrees. This may be a good feature to implement into the MKII device as it will be targeted for bigger skydives.
   
+\section{Approach and Implementation to Design}
+The idea was to create a prototype device device before tackling the main unit to give a better insight into how the device will be made. The prototype was made from breakout boards. This allowed focus to be given in the understanding of the how and why the components would work with each other. It also allows for a cheap and effective way to create a strong and stable working unit before sourcing out other components. The idea was to study the components from the breakout boards with the idea that they would work. they come with recommended resistors that, most probably, the company has recommended to use in sync with the devices to reduce noise. Again, this is extremely useful when building a device for the first time.
+When looking at building the final device studying data sheets and the price was the key drive into the selection. Looking for key functionality and appropriate pricing would allow for the device to me made on a larger scale with a better overhead. It was also necessary to keep an eye out at extra functionary with the MKII device in mind but not essential.
   
+\subsubsection{Debugging}
+The implementation and testing of the device will be done in stages. Each sensor will run and be tested to ensure that the correct calibration and the correct data is being recorded. Making sure that the micro-controller works by running a simple, known to work, program will ensure that the other sensory equipment will recorded precisely. 
+Testing each one of the components with the micro-controller and a smaller version of the final program will ensure each component works correctly. Physical testing of the equipment will also ensure that no dud readings are being stored to corrupt further data. 
+All the initial testing will be done on a break out board or 'bread-board' equivalent. Then after this a PCB may be printed for the final design .
   
   
   
