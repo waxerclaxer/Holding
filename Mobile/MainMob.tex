@@ -16,8 +16,8 @@
 
 
 \begin{abstract}
-When skydiving the ability to record data of the jump is essential when jumping in formation. With the use of inertial measurement units (IMU) it is possible to gain a better understanding of the technique used and improve on form. With the use of sensing equipment such as ; Magnetometer, accelerometer, gyroscope it is possible to get accurate results of pitch, yaw and roll. The choice of a good micro-controller will determine the over all efficiency.
-Storing this data and being able to access it either between jumps or after a day of jumping is essential. Making this easy for the user to attain will be looked at in the form of SD cards and direct link. Blue-tooth will also be discussed.
+When skydiving the ability to record data of the jump is essential when jumping in formation. With the use of inertial measurement units (IMU) it is possible to gain a better understanding of the technique used and improve on form. With the use of sensing equipment such as ; Magnetometer, accelerometer, gyroscope, barometer it is possible to get accurate results of pitch, yaw and roll. The choice of a good micro-controller will determine the over all efficiency.\\
+Storing this data and being able to access it either between jumps or after a day of jumping is essential. Making this easy for the user to attain will be looked at in the form of SD cards and direct link. Blue-tooth will also be discussed.\\
 Making the device energy efficient and possibilities of scavenging energy from wind and sun will be discussed. During the project, the price of materials will be in the forefront of thought, ensuring that a good price to efficiency ratio will be met.
 
 \end{abstract}
@@ -35,7 +35,7 @@ The three main sensing components that will be used will be a gyroscope, acceler
 For the prototyping breakout board will be used. By creating the prototype using breakout boards it is possible to have a more practical and faster way to make the product. It will also be good to study the way that they are put together to then efficiently create the final product. A great advantage of using break out for the prototyping is that they include any resistors or capacitors that may be needed to reduce noise on the device. This will be considered when creating the final design, hopefully based on some ideas that the break out boards provide.
  
 \subsection{Micro-controller}
-The micro-controller is chosen due to the sensors that are needed. Available EEPROM memory is taken in to account to store system files. The micro controller that will be used for the prototype is PIC16F818. 
+The micro-controller is chosen due to the sensors that are needed. Available EEPROM memory is taken in to account to store system files. The micro controller that will be used for the prototype is PIC16F818. This board has all the required resistors to reduce noise. 
 \begin{itemize}
 \item 128 bytes of EEPROM data memory
 \item 2 to 5.5 voltage
@@ -88,7 +88,7 @@ The aim goal for the power is small and rechargeable. With this in mind the ANSM
 \section{Final Product Specification}
 
 \subsection{Micro-controller}
-The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $i^2c$ connections. It allows for selectable selectable frequencies, including 31.25 kHz, 125 kHz,250 kHz, 500 kHz, 1 MHz, 2 MHz, 4 MHz and 8 MHz from the RC oscillator. This will enable the ability to select the most efficient frequency and will save power usage. 
+The micro controller that will be used for the prototype is PIC16F818. This is the same micro controller that was used in the prototype. For its capabilities and its price it seem the most efficient. With having 128Bytes EEPROM memory it is possible to store the code for the device on here. It will then export the information that is collected straight of the micro sd card ready for the user to transport to a computer for retrieval. The micro-controller also has bi-directional I/O ports which allow for multiple $i^2c$ connections. It allows for selectable selectable frequencies, including 31.25 kHz, 125 kHz,250 kHz, 500 kHz, 1 MHz, 2 MHz, 4 MHz and 8 MHz from the RC oscillator. This will enable the ability to select the most efficient frequency and will save power usage. By exploiting the $i^2c$ connections it is possible to make a more streamlined approach to the over all deign.
 \begin{itemize}
 \item 128 bytes of EEPROM data memory
 \item 2 to 5.5 voltage
@@ -105,7 +105,7 @@ The micro controller that will be used for the prototype is PIC16F818. This is t
 \end{center}
 
 \subsection{Gyroscope and Accelerometer}
-STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is the connections used will be less. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode. Is supported by a $i^2c$ connector. This particular model has the ability to change from low power mode to optimal mode when it is in free fall. This is not going to be exploited in this model but may be considered for the MKII
+STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. As opposed to the prototype model this unit contains both. The advantage of this is that is will take up less space on the PCB. It is also by far and large the cheapest that has been sought out and works well with the voltages needed and the micro controller. It does not have any extra features such as stand by mode or a sleep mode. Is supported by a $i^2c$ connector. This particular model has the ability to change from low power mode to optimal mode when it is in free fall. This is not going to be exploited in this model but may be considered for the MKII
 \begin{itemize}
 \item 2.4 - 3.6 voltage 
 \item Gyroscope -  ± 250°/s, ± 500°/s, ± 2000°/s
@@ -125,7 +125,7 @@ STMICROELECTRONICS - LSM330DLC functionas as both gyroscope and accelerometer. A
 \end{center}
 
 \subsection{Magnetometer}
-MEMSIC - MMC33160MT magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2c$ bus, it eliminates the need for any A/D converters. 
+MEMSIC - MMC33160MT magnetometer has been selected. This particular device takes readings from the X, Y, and the Z axis as measured data. Being connected to the micro-processor directly from the $i^2c$ bus, it eliminates the need for any A/D converters.  essentially being an electromagnet this will be the most power 'hungry' component in the module.
 
 \begin{itemize}
 \item $accuracy^2$ ~ min = +-2.0 / max +- 5.0 degrees 
@@ -236,7 +236,7 @@ This also allows the device not to have a LED constantly on. If the flash was to
 
 \section{Size and Price}
 The size of the product  has been given to the specification of 50mm × 30mm × 15mm. The device will be built around the largest component, the battery. This has the longest length of 50mm so will fit to the specification required.
-The device price per unit will work out at £42.18 per unit. This is based on buying the components at less that 10 per unit.
+The device price per unit will work out at £42.18 per unit. This is based on buying the components at less that 10 per unit.The weight of the component will be extremely dependent on the battery.
 \section{Description and Diagram of the Interconnections}
 
 \begin{figure}[ht!]
@@ -247,7 +247,7 @@ The device price per unit will work out at £42.18 per unit. This is based on bu
 \end{figure}
 
 \subsection{Reasons of Choice}
-The reasons in choice for the type of serial bus was down to the flexibility and available parts. Building the project with $I2^C$ in mind allowed for a more straight forward approach in connecting to the micro-controller. Inter integrated circuit controller or $I2^C$ is more recent than SPI and has more flexibility in particular areas such as;
+The reasons in choice for the type of serial bus was down to the flexibility and available parts. Building the project with $I2^C$ in mind allowed for a more straight forward approach in connecting to the micro-controller. Inter integrated circuit controller or $I2^C$ is more recent than SPI and has more flexibility in particular areas such as;\\
 
 \begin{itemize}
 \item Analogue to digital / digital to analogue conversion 
@@ -255,11 +255,12 @@ The reasons in choice for the type of serial bus was down to the flexibility and
 \item Use with other micro controller (may be required for MKII)
 \end{itemize}
 
-When information is requested from the device it is sent down the same bus. 7 bits are used in the address and the remaining bit is used to indicate weather the master wished to read or write the data. This will look somthing like [xxxxxxx1]
-
-One of the main disadvantages that $I2^C$ has in comparison to SPI is the data transfer rate of up to 10MHz as opposed to the normal rate of 400KHz. 
-
+When information is requested from the device it is sent down the same bus. 7 bits are used in the address and the remaining bit is used to indicate weather the master wished to read or write the data. This will look somthing like [xxxxxxx1]\\
+One of the main disadvantages that $I2^C$ has in comparison to SPI is the data transfer rate of up to 10MHz as opposed to the normal rate of 400KHz. \\
 As seen in diagram 1.1 the basic connections for all the main sensory equipment can be seen. Due to the use of the same $i^2c$ connection it is possible to connect to the same pin. 
+
+\subparagraph{Safety}
+To ensure that the device will be safe in the environment that it will be used in, its important to consider the change of temperature and the possibility of moisture in the air. To prevent moisture from seeping in, the case could have rubber seals around the edges. It will also be important to ensure that the components on the inside are secure due to the amount of G-foce expected on opining the parachute, estimated 3g.
 
 
 \newpage
@@ -267,10 +268,11 @@ As seen in diagram 1.1 the basic connections for all the main sensory equipment 
 
 
 \section{Operating modes}
-The device will try to be as simplistic as possible to use. By having the main states; Off, Standby and Recording, it will use LED to indicate what the device is doing. As the device is in standby mode it will be in low power mode ready  to move to the recording state. When in the recording state, transfer of the data collected will be wrote straight to the microSD card. The LED will be a solid colour of yellow when the device is on. To indicate that the device is recording data the LED will be flash the same yellow. Along side the yellow light a flashing red will indicate that data is being wrote to the microSD card. This means that the user will see a red/yellow intermittent flash when in the jump. This system has be inspired by the iPod shuffle that does not have a screen but is able to indicate its current state very efficiently.
+The device will try to be as simplistic as possible to use. By having the main states; Off, Standby and Recording, it will use LED to indicate what the device is doing. As the device is in standby mode it will be in low power mode ready  to move to the recording state. When in the recording state, transfer of the data collected will be wrote straight to the microSD card. The LED will be a solid colour of yellow when the device is on. \\
+To indicate that the device is recording data the LED will be flash the same yellow. Along side the yellow light a flashing red will indicate that data is being wrote to the microSD card. This means that the user will see a red/yellow intermittent flash when in the jump. This system has be inspired by the iPod shuffle that does not have a screen but is able to indicate its current state very efficiently.\\
 
 \section{Major Functions}
-The micro-controller will have 4 sensory equipment. Each one will collect information and send it direct to the micro-controller where it will then be written to the microSD card. The four main data collecting functions will be;
+The micro-controller will have 4 sensory equipment. Each one will collect information and send it direct to the micro-controller where it will then be written to the microSD card. The four main data collecting functions will be;\\
 
 \begin{itemize}
 \item $COL$-$BARO$
@@ -280,13 +282,13 @@ The micro-controller will have 4 sensory equipment. Each one will collect inform
 \end{itemize}
 
 \subsubsection{$COL$-$BARO$}
-The barometer will collect data on the pressure of the surroundings of the device current hight. This will be measured in bar. Some mathematics will have to be done on the device to convert to pascals so that the user can then work out in feet the hight they were at. Untill the device is tested this will be hard to know if there is enough time to do the maths and right to the microSD card at the same time. 
+The barometer will collect data on the pressure of the surroundings of the device current hight. This will be measured in bar. Some mathematics will have to be done on the device to convert to pascals so that the user can then work out in feet the hight they were at. Untill the device is tested this will be hard to know if there is enough time to do the maths and right to the microSD card at the same time. \\
 \subsubsection{$COL$-$GYRO$}
-The gyroscope will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.
+The gyroscope will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.\\
 \subsubsection{$COL$-$MAG$}
-The magnetometer will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.
+The magnetometer will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.\\
 \subsubsection{$COL$-$ACC$}
-The accelerometer will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.
+The accelerometer will collect three axis information based on the orientation. This will be sent to the micro-controller and the wrote to the microSD. The data will be raw from the sensor and will be processed on the same line using comma spacing.\\
 
 
 
@@ -311,29 +313,98 @@ This particular device allows for use of either the accelerometer, the gyroscope
 One of the main features this provides but will not be used in a temperature sensor. It will not be used as the device is targeted for 10,000 feet and all the equipment has no problem working to -5 degrees. This may be a good feature to implement into the MKII device as it will be targeted for bigger skydives.
   
 \section{Approach and Implementation to Design}
-The idea was to create a prototype device device before tackling the main unit to give a better insight into how the device will be made. The prototype was made from breakout boards. This allowed focus to be given in the understanding of the how and why the components would work with each other. It also allows for a cheap and effective way to create a strong and stable working unit before sourcing out other components. The idea was to study the components from the breakout boards with the idea that they would work. they come with recommended resistors that, most probably, the company has recommended to use in sync with the devices to reduce noise. Again, this is extremely useful when building a device for the first time.
+The idea was to create a prototype device device before tackling the main unit to give a better insight into how the device will be made. The prototype was made from breakout boards. This allowed focus to be given in the understanding of the how and why the components would work with each other. It also allows for a cheap and effective way to create a strong and stable working unit before sourcing out other components. \\
+The idea was to study the components from the breakout boards with the idea that they would work. they come with recommended resistors that, most probably, the company has recommended to use in sync with the devices to reduce noise. Again, this is extremely useful when building a device for the first time.\\
 When looking at building the final device studying data sheets and the price was the key drive into the selection. Looking for key functionality and appropriate pricing would allow for the device to me made on a larger scale with a better overhead. It was also necessary to keep an eye out at extra functionary with the MKII device in mind but not essential.
   
 \subsection{Debugging}
-The implementation and testing of the device will be done in stages. Each sensor will run and be tested to ensure that the correct calibration and the correct data is being recorded. Making sure that the micro-controller works by running a simple, known to work, program will ensure that the other sensory equipment will recorded precisely. 
+The implementation and testing of the device will be done in stages. Each sensor will run and be tested to ensure that the correct calibration and the correct data is being recorded. Making sure that the micro-controller works by running a simple, known to work, program will ensure that the other sensory equipment will recorded precisely. \\
 Testing each one of the components with the micro-controller and a smaller version of the final program will ensure each component works correctly. Physical testing of the equipment will also ensure that no dud readings are being stored to corrupt further data. 
-All the initial testing will be done on a break out board or 'bread-board' equivalent. Then after this a PCB may be printed for the final design .
+All the initial testing will be done on a break out board or 'bread-board' equivalent. Then after this a PCB may be printed for the final design .\\
 
 \subsubsection{Additional}
-A library  may be used to call upon for the more complex areas of the code. This ties in with the amount of storage needed on the device. This is all dependent of the code needed to run and process the calculations. 
+A library  may be used to call upon for the more complex areas of the code. This ties in with the amount of storage needed on the device. This is all dependent of the code needed to run and process the calculations. \\
 To use the device in the field it is important to understand the states the device will be in. Have the device on standby until the point of jumping, at which point put the device in to recording mode. When the device goes back into standby mode it is then ready to recoreded again, as the data has been safely moved to the microSD card. 
   
   
-  
-  
-  
+\section{MKII Device}
+
+The idea to improve the device has been kept in mind in the production of the MKI device. Where some aspects will be the same some will try to incorporate a different approach as to how to improve the for of a formation diver. Keeping the recording of the yaw pith and the roll of a device will be the same but the diver will have sensors on their extremities and then one at their centre of gravity. This will relay information on the movement of; arms, legs, head and the torso of the diver. These devices will be built to the same specification as the MKI but will interoperate a more powerful central processing unit to deal with the information from 6 devices rather than the one device.\\
+One of the most important aspects of formation skydiving is not only the form of the individual diver but also the contacts that the team make. At the moment when diving the team will be observed form the ground or chased by a diving camera. If the device could recorded contacts made in a group, mixed with the current form of each diver, this will improve the over all performance.\\
+
+\subsection{Extra Hardware}
+
+Some extra hardware idea will be discussed with the previous ideas in mind. They are only ideas on the possibilities and may or may not work or function directly with the current MKI device.
+
+\subsubsection{Near Field Communication}
+NFC tags can be used to indicate to the device when a contact has been made. By incorporating them into the device on the contacts of the arms and the legs it will be possible to indicate when a formation has been achieved.\\
+By using a dynamic interface it is possible to receive indication when a signal has been made but also possible to disrupt. 
+\subparagraph{NFC Device}
+The device that has been looked at for a possible merge into the current device is the TEXAS INSTRUMENTS - RF430CL330.The device is a perfect tool for this future spec situation. It allows connection of either $I^2C$  or SPI and the user does not have to remote program the tag in the factory, this can be done on the device itself.\\
+An interpret pin will indicate to the host controller that the NFC data exchange format (NDEF) memory has been accessed. The data transfer rate of information is clocked at 848 kb/s. This is more than enough time to send a boolean result back to the main host controller in the array of devices. 
+
+\begin{itemize}
+\item 3.3V
+\item 400MHz clock
+\item Pulse duration 75 ns
+\item 200 $\mu A$ for RF enabled 
+\item 250 $\mu A$ for reading RF
+\end{itemize}
+
+\begin{center}
+  \begin{tabular}{ | l | r |}
+    \hline
+    Amount &  Price with VAT £ \\ \hline
+    1 & 1.89  \\ \hline
+    10 & 1.59  \\ \hline
+    100 & 1.16 \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection{Wifi}
+
+The devices could communicate with a wire lead but this may be impractical covering your body in wired before throwing yourself out from a plane. A possible solution would be to use with a WiFi system. There are a few obvious problems when using wifi. Two main ones being the price and power consumption. Having researched the WiFi SMD Module - CC3000 it possible to see some benefits.
+
+\begin{itemize}
+\item Supply Voltage: 2.9V - 4.8V
+\item Integrated EEPROM stores firmware patch, network configuration, and MAC address
+\item Programmable through an I2C interface
+\end{itemize}
+With the current specifications of the MKI device it would not be possible to integrate this into the design based on the current voltage of the device but this is something that could be changed, would have to be changed, to improve the device.
+\subparagraph{Current hardware}
+Current hardware at the moment resembles this manufacturing design such as sport monitoring devices and formula one cars. They only thing that will ever get in the way of these devices is the size of the device, the power consumption needed to monitor all the extremities at the same time, indicate contacts made and send data over the air. 
+
+
   \begin{thebibliography}{1}
 
-  \bibitem [1] Texas Instruments, “High speed CMOS logic analog
-multiplexers/demultiplexers,” 74HC4051 datasheet, Nov. 1997 [Revised Sept.
-2002].
+\bibitem [1] MIcroChip, “High speed CMOS logic analog
+multiplexers/demultiplexers,18/20-Pin Enhanced Flash Microcontrollers
+with nanoWatt Technolo” PIC16F818/819 datasheet,  2004.
 
-  \end{thebibliography}
+\bibitem [2] ST, “HiNEMO inertial module:
+3D accelerometer and 3D gyroscope,” LSM330DLC datasheet, 2012 (rev.2)
+
+\bibitem [3] MEMSIC, “Ultra Small 3-axis Magnetic
+Sensor, With I2C Interface,” MMC328xMS datasheet, March. 2011
+
+\bibitem [4] TST, “MEMS pressure sensor: 260-1260 mbar absolute digital output
+barometer,” LPS331AP datasheet, 2011.
+
+\bibitem [5] Transcend, “microSD Memory Card,” TS1G~2GUSD datasheet.
+
+\bibitem [6] ScanDisk, “SanDisk SD Card,” Document No. 80-13-00169, Nov. 2004
+
+\bibitem [7] Texas Instruments, “HDYNAMIC NFC INTERFACE TRANSPONDER,” RF430CL330H datasheet, Nov. 2012 
+
+\bibitem [8] Texas Instruments, “TI SimpleLinkTM CC3000 Module – Wi-Fi 802.11b/g Network Processor,” CC3000 datasheet, Nov. 2012 
+
+\bibitem [9] , “I2C and SPI,” 2104. [Online]. Available: http://quick2wire.com/articles/i2c-and-spi/ [Accessed April, 2014]
+
+\bibitem [10] TST, “Apollo Guidance and Navigation 
+Considerations of Apollo IMU Gimbal Lock,” MIT Instrumentation Laboratory Document E-1344 , 2011
+
+ \end{thebibliography}
 
  
 \end{document}

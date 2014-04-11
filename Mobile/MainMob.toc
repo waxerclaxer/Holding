@@ -20,6 +20,7 @@
 \contentsline {section}{\numberline {1.3}Size and Price}{7}
 \contentsline {section}{\numberline {1.4}Description and Diagram of the Interconnections}{7}
 \contentsline {subsection}{\numberline {1.4.1}Reasons of Choice}{7}
+\contentsline {subparagraph}{Safety}{8}
 \contentsline {chapter}{\numberline {2}Control Algorithm and Software}{9}
 \contentsline {section}{\numberline {2.1}Operating modes}{9}
 \contentsline {section}{\numberline {2.2}Major Functions}{9}
@@ -27,10 +28,16 @@
 \contentsline {subsubsection}{$COL$-$GYRO$}{10}
 \contentsline {subsubsection}{$COL$-$MAG$}{10}
 \contentsline {subsubsection}{$COL$-$ACC$}{10}
-\contentsline {section}{\numberline {2.3}Exploiting the Potential}{11}
-\contentsline {subsubsection}{Micro-controller}{11}
-\contentsline {subsubsection}{Gyroscope and Accelerometer}{11}
+\contentsline {section}{\numberline {2.3}Exploiting the Potential}{10}
+\contentsline {subsubsection}{Micro-controller}{10}
+\contentsline {subsubsection}{Gyroscope and Accelerometer}{10}
 \contentsline {subsubsection}{Barometer}{11}
 \contentsline {section}{\numberline {2.4}Approach and Implementation to Design}{11}
 \contentsline {subsection}{\numberline {2.4.1}Debugging}{12}
 \contentsline {subsubsection}{Additional}{12}
+\contentsline {section}{\numberline {2.5}MKII Device}{12}
+\contentsline {subsection}{\numberline {2.5.1}Extra Hardware}{13}
+\contentsline {subsubsection}{Near Field Communication}{13}
+\contentsline {subparagraph}{NFC Device}{13}
+\contentsline {subsubsection}{Wifi}{13}
+\contentsline {subparagraph}{Current hardware}{14}
