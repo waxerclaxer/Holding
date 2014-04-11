@@ -324,7 +324,7 @@ All the initial testing will be done on a break out board or 'bread-board' equiv
 
 \subsubsection{Additional}
 A library  may be used to call upon for the more complex areas of the code. This ties in with the amount of storage needed on the device. This is all dependent of the code needed to run and process the calculations. \\
-To use the device in the field it is important to understand the states the device will be in. Have the device on standby until the point of jumping, at which point put the device in to recording mode. When the device goes back into standby mode it is then ready to recoreded again, as the data has been safely moved to the microSD card. 
+To use the device in the field it is important to understand the states the device will be in. Have the device on standby until the point of jumping, at which point put the device in to recording mode. When the device goes back into standby mode it is then ready to record again, as the data has been safely moved to the microSD card. 
   
   
 \section{MKII Device}
@@ -340,7 +340,7 @@ Some extra hardware idea will be discussed with the previous ideas in mind. They
 NFC tags can be used to indicate to the device when a contact has been made. By incorporating them into the device on the contacts of the arms and the legs it will be possible to indicate when a formation has been achieved.\\
 By using a dynamic interface it is possible to receive indication when a signal has been made but also possible to disrupt. 
 \subparagraph{NFC Device}
-The device that has been looked at for a possible merge into the current device is the TEXAS INSTRUMENTS - RF430CL330.The device is a perfect tool for this future spec situation. It allows connection of either $I^2C$  or SPI and the user does not have to remote program the tag in the factory, this can be done on the device itself.\\
+The device that has been looked at for a possible merge into the current device is the TEXAS INSTRUMENTS - RF430CL330.The device is a perfect tool for this future specification situation. It allows connection of either $I^2C$  or SPI and the user does not have to remote program the tag in the factory, this can be done on the device itself.\\
 An interpret pin will indicate to the host controller that the NFC data exchange format (NDEF) memory has been accessed. The data transfer rate of information is clocked at 848 kb/s. This is more than enough time to send a boolean result back to the main host controller in the array of devices. 
 
 \begin{itemize}
