@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.25)  11 APR 2014 14:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.3.25)  16 APR 2014 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -232,12 +232,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
  [2
 
 ]
@@ -303,77 +303,82 @@ Missing character: There is no Â in font cmr10!
 Missing character: There is no £ in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no £ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no — in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no — in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no £ in font cmr10!
 
 <MainImage.png, id=36, 548.80031pt x 481.04718pt>
 File: MainImage.png Graphic file (type png)
  <use MainImage.png>
-Package pdftex.def Info: MainImage.png used on input line 244.
+Package pdftex.def Info: MainImage.png used on input line 245.
 (pdftex.def)             Requested size: 327.20668pt x 286.8175pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 [7] [8 <./MainImage.png>]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 <ImageFlow.png, id=47, 571.38469pt x 526.96875pt>
 File: ImageFlow.png Graphic file (type png)
  <use ImageFlow.png>
-Package pdftex.def Info: ImageFlow.png used on input line 297.
+Package pdftex.def Info: ImageFlow.png used on input line 298.
 (pdftex.def)             Requested size: 327.20668pt x 301.77441pt.
  [10]
 [11 <./ImageFlow.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 321--324
+Underfull \hbox (badness 10000) in paragraph at lines 322--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--334
+Underfull \hbox (badness 10000) in paragraph at lines 333--335
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 [12]
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
+
+ []
+
 Missing character: There is no Â in font cmr10!
 Missing character: There is no £ in font cmr10!
- [13] [14]
+[13] [14]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
@@ -417,7 +422,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
 
-Underfull \hbox (badness 4291) in paragraph at lines 398--399
+Underfull \hbox (badness 4291) in paragraph at lines 399--400
 []\OT1/cmr/m/n/10 exas In-stru-ments, HDY-NAMIC NFC IN-TER-FACE TRANSPON-DER, R
 F430CL330H
  []
@@ -466,7 +471,7 @@ mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb>
-Output written on MainMob.pdf (17 pages, 173726 bytes).
+Output written on MainMob.pdf (17 pages, 173933 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
