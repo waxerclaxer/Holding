@@ -20,7 +20,7 @@ def print_board(s,board):
 	for i in range(10):
 	
 		#print the vertical line number
-		if i != 9: 
+		if i != 9:
 			print str(i+1) + "  ",
 		else:
 			print str(i+1) + " ",
@@ -44,8 +44,8 @@ def print_board(s,board):
 		#print a horizontal line
 		if i != 9:
 			print "   ----------------------------------------------------------"
-		else: 
-			print 
+		else:
+			print
 
 def user_place_ships(board,ships):
 
@@ -83,7 +83,7 @@ def computer_place_ships(board,ships):
 			x = random.randint(1,10)-1
 			y = random.randint(1,10)-1
 			o = random.randint(0,1)
-			if o == 0: 
+			if o == 0:
 				ori = "v"
 			else:
 				ori = "h"
@@ -225,10 +225,10 @@ def check_sink(board,x,y):
 	elif board[x][y] == "B":
 		ship = "Battleship"
 	elif board[x][y] == "S":
-		ship = "Submarine" 
+		ship = "Submarine"
 	elif board[x][y] == "D":
 		ship = "Destroyer"
-	elif board[x][y] == "P": 
+	elif board[x][y] == "P":
 		ship = "Patrol Boat"
 	
 	#mark cell as hit and check if sunk
